@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATIVIDADE</title>
-    <script src="script.js"></script>
+
 </head>
 <body>
-    
+<h1>Digite aqui seu nome completo:</h1>
+<input type="text" id="Nome">
+<button onclick="formatacao()">Formatar</button>
+<p>Nome: <span id="resultado"></span> </p>
+
+<script>
+    function formatacao(){
+        const palavras = ["da", "de", "do", "dos", "das", "e"];
+        const nomeCompletp = document.getElementById("nomeCompleto").value.trim();
+        let partes = nome.split(" ").filter(p => !juncoes.include(p.toLowerCase()))
+        const nomeFinal = partes.pop();
+        const restante = partes.join(" ");
+        document.getElementById("resultado").textContent = '${nomeFinal}, ${restante}';
+    }
+</script>
 </body>
 </html>
